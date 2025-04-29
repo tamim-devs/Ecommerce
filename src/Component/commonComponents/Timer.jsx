@@ -5,7 +5,7 @@ const Timer = ({ TimeofOffer }) => {
 
      useEffect(() => {
           const worker = new Worker(
-               new URL("../../../CountDownWorker.js", import.meta.url)
+               new URL("../../homePage/CountDownWorker.js", import.meta.url)
           );
           worker.postMessage(Time);
           worker.onmessage = (e) => {
