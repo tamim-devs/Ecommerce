@@ -9,7 +9,16 @@ const Timer = ({ TimeofOffer }) => {
           );
           worker.postMessage(Time);
           worker.onmessage = (e) => {
-               setTime(e.data);
+               setTime(e.data);               module.exports = {
+                 content: [
+                   "./index.html",
+                   "./src/**/*.{js,ts,jsx,tsx}",
+                 ],
+                 theme: {
+                   extend: {},
+                 },
+                 plugins: [],
+               };
           };
      }, []);
 
