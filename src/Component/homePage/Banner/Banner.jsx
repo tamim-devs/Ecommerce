@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { category } from "../../../../Data/data";
+import { category } from "../../../../Data/Data.js";
 import { FaAngleRight } from "react-icons/fa6";
 import "slick-carousel/slick/slick.css";
 import Slider from "react-slick";
