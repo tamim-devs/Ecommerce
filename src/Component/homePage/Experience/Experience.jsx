@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import Experienceimg from "../../../assets/images/jbl_box.png"
-
+import counterworker from '../CountDownWorker';
 const Experience = ({timeDuration = 1 }) => {
      const [Time, setTime] = useState(timeDuration * 24 * 60 * 60 * 1000 || 0);
 
      useEffect(() => {
           const worker = new Worker(
-               new URL("../../../../CountDownWorker.js", import.meta.url)
+               new URL(counterworker, import.meta.url)
           );
+
           worker.postMessage(Time);
           worker.onmessage = (e) => {
                setTime(e.data);
